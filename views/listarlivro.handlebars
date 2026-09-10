@@ -1,0 +1,16 @@
+<h1>Livros</h1>
+
+<a href="/">Voltar</a>
+
+{{#if livros.length}}
+  <ul>
+    {{#each livros}}
+      <li>
+        {{titulo}} ({{anoPublicacao}})
+        <a href="/livros/{{id}}">Ver detalhes</a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>Nenhum livro cadastrado.</p>
+{{/if}}
